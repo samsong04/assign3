@@ -1,0 +1,109 @@
+
+/* CSS Document */
+/* The body tag style applies to all elements on the page */
+body {
+    background: linear-gradient(95deg, rgb(217, 0, 255),rgb(54, 38, 54));
+    font-family: Verdana, Geneva, Arial, sans-serif;
+    padding: 0px;
+    margin: 0px;
+}
+
+/*이거 해놓으면 html파일에 설정해놔도 이걸로 됨 */
+video {
+    width: 100%;
+    padding: 15px;
+    margin: 15px;
+    background-color: black;
+    border: 2px white solid;
+    box-shadow: 10px 10px 5px black;
+    max-width: 400px;
+}
+
+
+/*이거 semantic html용임 <-header footer */
+header {
+    background-color: whitesmoke;
+    color: rgb(34, 5, 199);
+    padding-top: 10px;
+    padding-bottom: 5px;
+}
+
+
+
+figure {
+    position: relative;
+    width: 220px;
+    height: 200px;
+    background-color: white;
+    margin: 5px;
+    padding: 5px;
+    border: 1px solid black;
+}
+
+figcaption {
+    position: bottom;
+    background-color: black;
+    color: white;
+}
+
+/*여기까지 semetic*/
+
+
+
+/* The wrapper ID style is used with a div tag to provide a 960px wide page <-메인페이지 of webpage */
+.wrapper {
+    background: linear-gradient(to bottom, rgb(231, 172, 231) 0%,LightGray 100%); 
+}
+
+#whoami {
+    float: right;
+    width: 100%;
+    height: 600px;
+}
+
+/* Defining a style for a set of tags separated by commas applies the style to all tags */
+
+
+
+/* Defining a style for a set of tags not separated by commas applies the style 
+only to all tags within the preceding tag*/
+#banner h1 {
+    color: white;
+}
+
+/* Advanced Web design relies on class or ID styles, never tables */
+.box {
+    height: 350px;
+    width: 40%;
+    float: left;
+    
+    margin: 15px;
+    opacity: 0.5;
+}
+
+/* The following pseudo-class applies to the box class when in a hovered state */
+.box:hover {
+    
+    opacity: 1;
+}
+
+/* This clear class style terminates float */
+.clear {
+    clear: both;
+}
+
+.myimage{
+    max-width: 300px;
+}
+.myvideo{
+    max-width: 90%;
+}
+.nav-wrapper{
+    margin:0;
+    padding:0;
+    width:100%;
+}
+.nav-wrapper + main{
+    padding-top:80px;
+    padding-bottom: 100px;
+}

@@ -1,0 +1,56 @@
+<%- include ../partials/header.ejs %>
+<%- include ../partials/main_nav.ejs %>
+<!-- Main Content -->
+  <!--<div class="jumbotron jumbotron-fluid">-->
+<div class="container">
+    <div class="row">
+    <div class="col-md-offset-3 col-md-5">
+    <h1><%= title %></h1>
+     <a href="/course-list/add" class="btn btn-primary" role="button">
+                <i class="fas fa-plus-circle"></i> Add a Course </a>
+            <br>
+    <br>
+    <table class="table table-bordered table-striped table-hover">
+    <tr class="d-flex">
+        <th class="text-center col-6">Course</th>
+        <th class="text-center col-3">Course number</th>
+        <th class="text-center col-4">Professor</th>
+        <th class="text-center col-4">Prerequisite</th>
+        <th class="text-center col-2">Semester</th>
+        <th class="text-center col-2"></th>
+        <th class="text-center col-2"></th>
+    </tr>
+    <!--Repeat the template-->
+    <% for(let count=0; count < Courselist.length; count++) { %>
+        <tr class="d-flex">
+            <td class="text-center col-6"><%= Courselist[count].course %></td>
+            <td class="text-center col-3"><%= Courselist[count].coursenum %></td>
+            <td class="text-center col-4"><%= Courselist[count].professor %></td>
+            <td class="text-center col-4"><%= Courselist[count].prerequisite %></td>
+            <td class="text-center col-2"><%= Courselist[count].semester %></td>
+            <td class="text-center col-2">
+                <a href="/course-list/edit/<%= Courselist[count]._id %>"
+                    class="btn btn-primary">
+                    <i class="fas fa-pencil-alt"></i> Edit </a>
+            </td>
+            <td class="text-center col-2">
+                <a href="/course-list/delete/<%= Courselist[count]._id %>"
+                    class="btn btn-danger">
+                    <i class="fas fa-trash-alt"></i> Delete  </a>
+            </td>
+        </tr>
+
+    <% } %>
+    </table>
+    </div>
+    <script>
+    for (i = 1; i <= 1; i++) {
+      a = "<h1>Fall Semester ends at December 16th 2022.</h";
+      document.write(a);
+    }
+    </script>
+</div>
+</div>
+</main>
+<%- include ../partials/bottom_nav.ejs %>
+<%- include ../partials/footer.ejs %>
